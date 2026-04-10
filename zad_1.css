@@ -1,0 +1,193 @@
+.header {
+    font-size: 70px;
+    text-align: center;
+    font-style: italic;
+    color: rgb(235, 63, 183);
+    background: linear-gradient(to right,rgb(233, 198, 222), rgb(231, 106, 194));
+    margin-bottom: 5px;
+}
+
+body {
+    background-color: #e7c5e7;
+}
+
+.nav {
+    /* панель горизонтального меню */
+    background: linear-gradient(to right, #fdfdfd, rgb(235, 63, 183));
+    /* градиентное 
+закрашивание сверху вниз */
+    border-radius: 4px;
+    /* загругляем углы панели */
+    height: 50px;
+    /* высота панели (необходимо задавать, так как панель является обычным блоком) */
+    padding-top: 0.1px;
+    box-shadow: 5px 3px rgb(158, 74, 154);
+}
+
+.nav .pt {
+    /* пункты основного меню (используется контекстный селектор) дейстувует на элементы класса .pt вложенные в элементы с классом /nav */
+    background: linear-gradient(to bottom, #e696e6, rgb(240, 62, 225));
+    text-decoration: none;
+    /* убираем подчеркивание */
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    /* отображаем пункты меню блоками */
+    float: left;
+    /* делаем блоки плавающими */
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 13px 35px;
+    margin: 0 1px;
+    color: black;
+    text-transform: uppercase;
+    /* текст в кнопках верхним регистром  */
+    font-weight: 700;
+}
+
+.nav .pt:hover {
+    /* меняем фон кнопки при наведении */
+    background: linear-gradient(to bottom, rgb(230, 172, 227), rgb(228, 88, 233));
+}
+
+.nav div {
+    /* блоки содержащие выпадающие окна оборачиваем в отедельный блочный элемент */
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    float: left;
+    position: relative;
+    /* необходимо для корректной работы выпадающих блоков (чтобы вложенный выпадающий блок .drop (position:absolute) позиционировался относительно этого элемента) */
+}
+
+.nav div .drop {
+    /* блок для вложенных пунктов меню */
+    position: absolute;
+    z-index: 1;
+    /* вынимаем из нормального потока, чтобы отображать поверх другого контента при  необходимости */
+    display: none;
+    top: 100%;
+    /* смещаем относительно верхней стороны на 100 %, т.е. на всю высоту*/
+    left: 0%;
+}
+
+.drop_item {
+    /* оформление вложенных пунктов меню в блоке .nav div .drop*/
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(to bottom, rgb(233, 198, 222), rgb(231, 106, 194));
+    color: black;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 13px 35px;
+}
+
+.drop_item:hover {
+    /* изменение цвета вложенного меню при наведении */
+    background: linear-gradient(to bottom, rgb(156, 133, 149), rgb(134, 63, 113));
+}
+
+.nav div:hover div {
+    /* отображаем выпадающий блок при наведении */
+    display: block;
+}
+
+.main {
+    padding: 8px 8px 8px 8px;
+    background: linear-gradient(to top, rgb(233, 198, 222), rgb(231, 106, 194));
+    font-size: 20px;
+    color: rgb(235, 63, 183);
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px #925e92;
+}
+
+
+.right {
+    float: right;
+    width: 17%;
+    margin: 10px 0px 10px 10px;
+}
+
+.left {
+    float: left;
+    width: 17%;
+    margin: 10px 10px 10px 0px;
+}
+
+.center {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.in {
+    padding: 8px 8px 8px 8px;
+    background-color: #eccaeca8;
+    font-size: 20px;
+    color: rgb(228, 37, 167);
+    border-radius: 5px;
+}
+
+h3 {
+    background-color: #e6d6df;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px 5px 0px 5px;
+}
+
+p {
+    text-align: justify;
+    margin: 5px 5px 5px 5px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 5px 5px 5px 5px;
+    background-color: #a88499;
+    border-radius: 20px;
+    box-shadow: 4px 4px #925e92;
+}
+
+.nav1{
+    float: left;
+}
+
+
+.nav1 div {
+    /* блоки содержащие выпадающие окна оборачиваем в отедельный блочный элемент */
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    position: relative;
+    /* необходимо для корректной работы выпадающих блоков (чтобы вложенный выпадающий блок .drop (position:absolute) позиционировался относительно этого элемента) */
+}
+
+
+.nav1 div .drop1 {
+    /* блок для вложенных пунктов меню */
+    position: absolute;
+    /* вынимаем из нормального потока, чтобы отображать поверх другого контента при  необходимости */
+    display: none;
+    bottom: 0%;
+    width: 214px;
+}
+
+.drop_item1 {
+    /* оформление вложенных пунктов меню в блоке .nav div .drop*/
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.174);
+    color: rgb(226, 177, 204);
+    padding: 10px 10px;
+    font-size: 25;
+    text-align: center;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius: 30px;
+}
+
+.nav1 div:hover div {
+    /* отображаем выпадающий блок при наведении */
+    display: block;
+}
